@@ -5,11 +5,13 @@
 <html>
 
     <head>
-        <title>Rango</title>
-    </head>
-
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script type="text/javascript" src='{% static "main.js" %}'></script>
+        <link type="text/css" rel="stylesheet" href='{% static "stylesheet.css" %}'/>
     <body>
         <h1>Rango says...hello world!</h1>
+        <h2>Top 5 Categories</h2>
+        <div class="top-categories">
         {% if categories %}
         <ul>
             {% for category in categories %}
@@ -19,7 +21,7 @@
         {% else %}
             <strong>There are no categories present.</strong>
         {% endif %}
-
+        </div>
         <h2>Top 5 Pages</h2>
         {% if pages %}
         <ul>
