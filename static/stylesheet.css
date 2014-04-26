@@ -10,8 +10,14 @@ a {
     color: #2E78E6;
 }
 
-div.top-categories {
+div.top-five {
     width: 500px;
-    background: #555;
+    background: #bdbdbd;
     display: none;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+h2 {
+    cursor: pointer;
 }

@@ -10,8 +10,8 @@
         <link type="text/css" rel="stylesheet" href='{% static "stylesheet.css" %}'/>
     <body>
         <h1>Rango says...hello world!</h1>
-        <h2>Top 5 Categories</h2>
-        <div class="top-categories">
+        <h2 id="top">Top 5 Categories</h2>
+        <div class="top-five">
         {% if categories %}
         <ul>
             {% for category in categories %}
@@ -22,16 +22,20 @@
             <strong>There are no categories present.</strong>
         {% endif %}
         </div>
-        <h2>Top 5 Pages</h2>
+
+        <h2 id="top">Top 5 Pages</h2>
+        <div class="top-five">
         {% if pages %}
         <ul>
             {% for page in pages %}
             <li><a href="{{ page.url }}">{{ page.title }}</a></li>
             {% endfor %}
+        </ul>
         {% else %}
             <strong>There are no pages present.</strong>
         {% endif %}
-        </ul>
+        </div>
+
         <a href="/rango/about/">About</a>
         <a href="/rango/add_category">Add a New Category</a>
     </body>
