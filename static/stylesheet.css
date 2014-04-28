@@ -18,6 +18,6 @@ div.top-five {
     padding: 10px;
 }
 
-h2 {
+h2#top {
     cursor: pointer;
 }
