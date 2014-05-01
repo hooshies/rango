@@ -1,0 +1,17 @@
+body {
+  font-family: 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; }
+
+a {
+  color: #2E78E6; }
+  a:hover {
+    font-weight: bold; }
+
+div.top-five {
+  width: 500px;
+  background: #bdbdbd;
+  display: none;
+  border-radius: 5px;
+  padding: 10px; }
+
+h2#top {
+  cursor: pointer; }
