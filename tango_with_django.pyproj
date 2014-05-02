@@ -3,23 +3,21 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{41f3d022-2647-4b7b-b901-e73f33a3af0e}</ProjectGuid>
+    <ProjectGuid>{7b6f892a-8a20-4321-831b-e0917ddeea88}</ProjectGuid>
     <ProjectHome />
-    <StartupFile>manage.py</StartupFile>
+    <StartupFile />
     <SearchPath />
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
-    <ProjectTypeGuids>{5F0BE9CA-D677-4A4D-8806-6076C0FAAD37};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
-    <LaunchProvider>Django launcher</LaunchProvider>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
-    <UseIISExpress>true</UseIISExpress>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
   <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
   <ItemGroup>
     <Compile Include="manage.py" />
     <Compile Include="populate_rango.py" />
+    <Compile Include="test.py" />
     <Content Include="media\rango.jpg" />
     <Compile Include="rango\admin.py" />
     <Compile Include="rango\forms.py" />
@@ -28,77 +26,36 @@
     <Compile Include="rango\urls.py" />
     <Compile Include="rango\views.py" />
     <Compile Include="rango\__init__.py" />
-    <Content Include="static\stylesheet.css" />
     <Content Include="static\main.js" />
     <Content Include="static\rango.jpg" />
     <Compile Include="tango_with_django\settings.py" />
     <Compile Include="tango_with_django\urls.py" />
     <Compile Include="tango_with_django\wsgi.py" />
     <Compile Include="tango_with_django\__init__.py" />
+    <Content Include="media\profile_images\20071201__6653_0_me2.jpg" />
+    <Content Include="static\css\stylesheet.css" />
+    <Content Include="static\sass\stylesheet.css" />
+    <Content Include="static\sass\stylesheet.scss" />
     <Content Include="templates\rango\about.html" />
     <Content Include="templates\rango\add_category.html" />
     <Content Include="templates\rango\add_page.html" />
+    <Content Include="templates\rango\base.html" />
     <Content Include="templates\rango\category.html" />
     <Content Include="templates\rango\index.html" />
+    <Content Include="templates\rango\login.html" />
+    <Content Include="templates\rango\register.html" />
+    <Content Include="templates\rango\restricted.html" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="media" />
+    <Folder Include="media\profile_images" />
     <Folder Include="rango" />
     <Folder Include="static" />
+    <Folder Include="static\css" />
+    <Folder Include="static\sass\" />
     <Folder Include="tango_with_django" />
     <Folder Include="templates\" />
     <Folder Include="templates\rango" />
   </ItemGroup>
-  <ItemGroup>
-    <WebPiReference Include="https://www.microsoft.com/web/webpi/3.0/toolsproductlist.xml%3fDjango">
-      <Feed>https://www.microsoft.com/web/webpi/3.0/toolsproductlist.xml</Feed>
-      <ProductId>Django</ProductId>
-      <FriendlyName>Django 1.4</FriendlyName>
-    </WebPiReference>
-    <WebPiReference Include="https://www.microsoft.com/web/webpi/3.0/toolsproductlist.xml%3fPytho27">
-      <Feed>https://www.microsoft.com/web/webpi/3.0/toolsproductlist.xml</Feed>
-      <ProductId>Python27</ProductId>
-      <FriendlyName>Python 2.7</FriendlyName>
-    </WebPiReference>
-  </ItemGroup>
-  <Import Project="$(VSToolsPath)\Python Tools\Microsoft.PythonTools.Django.targets" />
-  <ProjectExtensions>
-    <VisualStudio>
-      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
-        <WebProjectProperties>
-          <UseIIS>True</UseIIS>
-          <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>0</DevelopmentServerPort>
-          <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:19081/</IISUrl>
-          <NTLMAuthentication>False</NTLMAuthentication>
-          <UseCustomServer>False</UseCustomServer>
-          <CustomServerUrl>
-          </CustomServerUrl>
-          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
-        </WebProjectProperties>
-      </FlavorProperties>
-      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
-        <WebProjectProperties>
-          <StartPageUrl>
-          </StartPageUrl>
-          <StartAction>CurrentPage</StartAction>
-          <AspNetDebugging>True</AspNetDebugging>
-          <SilverlightDebugging>False</SilverlightDebugging>
-          <NativeDebugging>False</NativeDebugging>
-          <SQLDebugging>False</SQLDebugging>
-          <ExternalProgram>
-          </ExternalProgram>
-          <StartExternalURL>
-          </StartExternalURL>
-          <StartCmdLineArguments>
-          </StartCmdLineArguments>
-          <StartWorkingDirectory>
-          </StartWorkingDirectory>
-          <EnableENC>True</EnableENC>
-          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
-        </WebProjectProperties>
-      </FlavorProperties>
-    </VisualStudio>
-  </ProjectExtensions>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
 </Project>
